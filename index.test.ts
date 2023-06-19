@@ -1,41 +1,41 @@
 import {
   compact,
-  // sumValues,
-  // addOrRemove,
+  sumValues,
+  addOrRemove,
   // chunk,
-  // arrayDifference,
-  // isPalindrome,
-  // getAllKeys,
+  arrayDifference,
+  isPalindrome,
+  getAllKeys,
   // Calculator,
   // sleep,
   // memoize,
 } from './index'
 
-// describe('1. compact', () => {
-//   it('takes an array with falsy values and returns a new array with the falsy values removed', () => {
-//     const before = ['a', false, 0, '', null, undefined, NaN, 'b']
-//     const after = ['a', 'b']
-//     expect(compact(before)).toEqual(after)
-//   })
-// })
+describe('1. compact', () => {
+  it('takes an array with falsy values and returns a new array with the falsy values removed', () => {
+    const before = ['a', false, 0, '', null, undefined, NaN, 'b']
+    const after = ['a', 'b']
+    expect(compact(before)).toEqual(after)
+  })
+})
 
-// describe('2. sumValues', () => {
-//   it('sums the numbers in an array', () => {
-//     expect(sumValues([1, 2, 3])).toEqual(6)
-//     expect(sumValues([0, -1, 2, -3])).toEqual(-2)
-//     expect(sumValues([])).toEqual(0)
-//   })
-// })
+describe('2. sumValues', () => {
+  it('sums the numbers in an array', () => {
+    expect(sumValues([1, 2, 3])).toEqual(6)
+    expect(sumValues([0, -1, 2, -3])).toEqual(-2)
+    expect(sumValues([])).toEqual(0)
+  })
+})
 
-// describe('3. addOrRemove', () => {
-//   it("adds an item to an array if it doesn't already exist", () => {
-//     expect(addOrRemove(5, ['a', true, 3])).toEqual(['a', true, 3, 5])
-//   })
+describe('3. addOrRemove', () => {
+  it("adds an item to an array if it doesn't already exist", () => {
+    expect(addOrRemove(5, ['a', true, 3])).toEqual(['a', true, 3, 5])
+  })
 
-//   it('removes an item from an array if it already exists', () => {
-//     expect(addOrRemove(7, ['a', true, 7])).toEqual(['a', true])
-//   })
-// })
+  it('removes an item from an array if it already exists', () => {
+    expect(addOrRemove(7, ['a', true, 7])).toEqual(['a', true])
+  })
+})
 
 // describe('4. chunk', () => {
 //   it('takes an array and chunks it into pieces of the given size', () => {
@@ -70,43 +70,43 @@ import {
 //   })
 // })
 
-// describe('5. arrayDifference', () => {
-//   it('calculates the difference between the first array and all the others', () => {
-//     expect(arrayDifference([1, 2, 3, 4, 5], [2, 3, 9], [5, 7])).toEqual([1, 4])
-//   })
-// })
+describe('5. arrayDifference', () => {
+  it('calculates the difference between the first array and all the others', () => {
+    expect(arrayDifference([1, 2, 3, 4, 5], [2, 3, 9], [5, 7])).toEqual([1, 4])
+  })
+})
 
-// describe('6. isPalindrome', () => {
-//   it('returns true if a string is a palindrome', () => {
-//     expect(isPalindrome('Racecar')).toBe(true)
-//   })
+describe('6. isPalindrome', () => {
+  it('returns true if a string is a palindrome', () => {
+    expect(isPalindrome('Racecar')).toBe(true)
+  })
 
-//   it('returns false if a string is not a palindrome', () => {
-//     expect(isPalindrome('Animal')).toBe(false)
-//   })
-// })
+  it('returns false if a string is not a palindrome', () => {
+    expect(isPalindrome('Animal')).toBe(false)
+  })
+})
 
-// describe('7. getAllKeys', () => {
-//   it('returns all the keys of a nested object', () => {
-//     const nestedObj = {
-//       abc: 123,
-//       xyz: true,
-//       foo: {
-//         bar: {
-//           baz: [4, 5, 6],
-//         },
-//       },
-//     }
-//     const expectedKeys = ['abc', 'xyz', 'foo', 'bar', 'baz', '0', '1', '2']
-//     expect(getAllKeys(nestedObj)).toEqual(expectedKeys)
-//   })
+describe('7. getAllKeys', () => {
+  it('returns all the keys of a nested object', () => {
+    const nestedObj = {
+      abc: 123,
+      xyz: true,
+      foo: {
+        bar: {
+          baz: [4, 5, 6],
+        },
+      },
+    }
+    const expectedKeys = ['abc', 'xyz', 'foo', 'bar', 'baz', '0', '1', '2']
+    expect(getAllKeys(nestedObj)).toEqual(expectedKeys)
+  })
 
-//   it('returns all the keys of a flat object', () => {
-//     const flatObj = { a: 1, b: 2, c: 3 }
-//     const expectedKeys = ['a', 'b', 'c']
-//     expect(getAllKeys(flatObj)).toEqual(expectedKeys)
-//   })
-// })
+  it('returns all the keys of a flat object', () => {
+    const flatObj = { a: 1, b: 2, c: 3 }
+    const expectedKeys = ['a', 'b', 'c']
+    expect(getAllKeys(flatObj)).toEqual(expectedKeys)
+  })
+})
 
 // describe('8. Calculator', () => {
 //   it('initializes the calculator with zero in the register by default', () => {
